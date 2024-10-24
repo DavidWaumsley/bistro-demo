@@ -80,18 +80,7 @@ header nav ul {
 
 /************************************************************************************/
 
-@media (width <= 68rem) {
-  .hero {
-    display: grid;
-    justify-self: center; 
-    margin-inline-end: 6vw;  
-  }
 
- 
-.hero-img {
-  margin-block-end: var(--space-m);  
-}
-}
 
 @media (width > 68rem) {
   .hero {
@@ -128,7 +117,18 @@ header nav ul {
   }
 } /* end of media query */
 
+@media (width <= 68rem) {
+  .hero {
+    display: grid;
+    justify-self: center; 
+    margin-inline-end: 6vw;  
+  }
 
+ 
+.hero-img {
+  margin-block-end: var(--space-m);  
+}
+}
 
 /************************************************************************************/
 
