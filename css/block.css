@@ -1,0 +1,537 @@
+/*
+BLOCK
+
+GLOBALS: 
+---------------------------
+0_ BODY (commons stuff)
+1_ TOP-BAR
+2_ HEADER & NAV 
+3_ FOOTER
+4_ FORMS
+----------------------------
+5_ HOMEPAGE MENU OPTIONS
+6_ HOMEPAGE SPECIAL SECTION
+7_ HOMEPAGE REVIEWS
+----------------------------
+8_ MENU PAGES
+
+
+/********************************************************/
+
+/************ 0_ BODY ************/
+
+/*********************************************************/
+
+/*button*/
+
+.btn {
+  border: none;
+  background-color: var(--brand);
+  color: var(--surface);
+  display: block;
+  margin-block-start: 0.3rem;
+  padding: 0.6em 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: var(--step--1);
+  text-decoration: none;
+  text-transform: uppercase;
+  /*  fit-content stops stretching grid */
+  height: fit-content;
+  width: fit-content;
+  font-size: var(--step--2);
+  outline: 0.1rem solid transparent;
+  outline-offset: -0.125rem;
+  transition: 0.3s;
+}
+
+button.btn {
+  padding: 1em 2em;
+}
+
+.btn:hover {
+  color: var(--surface);
+  transition: 0.1s ease-in;
+  box-shadow: 0.05rem 0.08rem;
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+
+.angle-up .btn{
+  background-color: var(--secondary);
+  color: #000;
+}
+/************************************************************************************/
+
+/**********1_ TOP-BAR  **********/
+
+/************************************************************************************/
+
+.top-bar {
+  color: var(--text-alt);
+  font-size: var(--step--1);
+}
+
+.top-bar a {
+  color: var(--text-alt);
+  text-decoration: none;
+}
+
+.top-bar a:hover { 
+  text-decoration: underline;
+}
+
+/* Light and dark toggle */
+
+.toggle {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 1rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.theme-icon {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+}
+.theme-icon:hover {
+  transform: scale(1.2);
+}
+
+.hide-dark-img {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-icon:active {
+    transform: rotate(-22deg);
+  }
+}
+
+/************************************************************************************/
+
+/**********2_ HEADER & NAV  **********/
+
+/************************************************************************************/
+
+.logo img {
+  width: 275px;
+  padding: var(--space-2xs);
+  margin-inline-start: -1rem;
+  background: linear-gradient(
+    transparent 0%,
+    transparent 20%,
+    var(--text-alt) 20%,
+    var(--text-alt) 72%,
+    transparent 72%,
+    transparent 72% 100%
+  );
+}
+
+nav a,
+nav a:active:not(.btn) {
+  font-size: var(--step--1);
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+
+nav a:hover:not(.btn) {
+  background: linear-gradient(
+    transparent 0%,
+    transparent 75%,
+    var(--brand) 75%,
+    var(--brand) 90%,
+    transparent 90%,
+    transparent 100%
+  );
+}
+
+header li {
+  list-style: none;
+  line-height: 2.2;
+}
+
+footer li {
+  list-style: none;
+}
+
+header a {
+  text-decoration: none;
+  padding-block: 1rem;
+}
+
+/************************************************************************************/
+
+/************ 3_ FOOTER ************/
+
+/************************************************************************************/
+
+.footer-bar {
+  border-block-start: 0.2rem solid var(--text);
+  font-size: var(--step--1);
+  padding: var(--space-s);
+  text-transform: capitalize;
+}
+
+footer h3 {
+  font-size: var(--step-1);
+}
+footer a {
+  font-size: var(--step--1);
+  text-decoration: none;
+  padding-block: 1rem;
+}
+
+footer p {
+  font-size: var(--step--1);
+}
+
+/*********************************************************/
+/************ 4_ FORMS ***********************************/
+
+/*********************************************************/
+
+/* Base form styles */
+form {
+  margin-block-end: var(--space-m);
+  padding: var(--space-m);
+  border-radius: 0.5rem;
+}
+
+.field-wrapper {
+  margin-block-end: 1.5rem;
+}
+
+/* Label styles */
+label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+  color: var(--text);
+}
+
+/* Required field indicator */
+.required {
+  color: red;
+  margin-inline-start: 0.25rem;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: 0.2rem solid var(--text);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--tertiary);
+}
+
+/* Error states */
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--tertiary);
+}
+
+/* Textarea specific styles */
+textarea {
+  height: 15rem;
+  resize: vertical;
+}
+
+/************************************************************************************/
+
+/************ 5_ HOMEPAGE MENU OPTIONS ************/
+
+/************************************************************************************/
+
+.menu-option-grid {
+  container-type: inline-size;
+  padding-block-start: var(--space-m);
+}
+.menu-option-item {
+  position: relative;
+  padding: var(--space-s);
+}
+
+.menu-option-item::before {
+  content: "";
+  position: absolute;
+  width: min(200px, 100%); /* the long side of the "L" shaped angle */
+  height: min(60px, 100%); /* the short side of the "L" shaped angle */
+  border: 0.2rem solid var(--text);
+}
+
+.menu-option-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.menu-option-item img {
+  transform: translateY(0); /*change to translateX for left/right */
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+}
+
+.menu-option-item img:hover {
+  transform: translateY(0.2rem); /*change to translateX for left/right */
+  transition: all 0.3s ease-in-out;
+  filter: none;
+}
+
+.menu-option-item h3 {
+  text-align: center;
+  font-size: var(--step--1);
+  font-family: system-ui, sans-serif;
+  text-transform: uppercase;
+  padding-block: var(--space-xs);
+}
+@media (width < 55rem) {
+  .menu-option-grid {
+    padding-inline: 10vw;
+  }
+
+  .menu-option-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .menu-option-item:nth-child(1)::before {
+    inset-block-end: auto; /* same as bottom in a Western writing mode*/
+    inset-block-start: 0; /* same as top */
+    inset-inline-end: auto; /* same as right */
+    inset-inline-start: 0; /* same as left */
+    border-width: 0.2rem 0 0 0.2rem; /* top / right/ bottom / left */
+  }
+  .menu-option-item:nth-child(2)::before {
+    inset-block-end: auto;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    border-width: 0.2rem 0.2rem 0 0;
+  }
+  .menu-option-item:nth-child(3)::before {
+    inset-block-end: auto;
+    inset-block-start: 0;
+    inset-inline-end: auto;
+    inset-inline-start: 0;
+    border-width: 0.2rem 0 0 0.2rem;
+  }
+} /* end of media query */
+
+@media (width > 55rem) {
+  .menu-option-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .menu-option-grid {
+    padding-inline: 5vw;
+  }
+
+  .menu-option-item {
+    padding: clamp(0.5rem, -0.8047rem + 3.7956cqi, 3.75rem);
+  }
+  .menu-option-item:nth-child(1)::before {
+    inset-block-end: auto; /* same as bottom in a Western writing mode*/
+    inset-block-start: 0; /* same as top */
+    inset-inline-end: auto; /* same as right */
+    inset-inline-start: 0; /* same as left */
+    border-width: 0.2rem 0 0 0.2rem; /* top / right/ bottom / left */
+  }
+
+  .menu-option-item:nth-child(2)::before {
+    inset-block-start: auto;
+    inset-block-end: min(1.8rem, 1.2rem);
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+    border-width: 0 0.2rem 0.2rem 0;
+  }
+  .menu-option-item:nth-child(3)::before {
+    inset-block-end: auto;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    border-width: 0.2rem 0.2rem 0 0;
+  }
+} /* end of media query */
+
+/********************************************************/
+
+/************ 6_ HOMEPAGE SPECIAL SECTION ************/
+
+/*********************************************************/
+
+.special-section {
+  background-color: var(--secondary);
+}
+
+/* The specials BG is te same for dark and light mode so we need this */
+
+.special-section h2,
+.special-section .sidelines {
+  color: #272726;
+  margin: 0;
+}
+
+.special-section .sidelines:before,
+.special-section .sidelines:after {
+  border-block-start: 0.2rem solid;
+}
+
+/*********************************************************/
+
+/************ 7_ HOMEPAGE REVIEWS *****************/
+
+/********************************************************/
+
+.review-wrapper {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  margin-inline: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  width: min(80vw, 500px);
+  height: min-content;
+}
+
+.review-wrapper {
+  scrollbar-color: var(--brand) transparent;
+  scrollbar-width: 30px;
+}
+
+.review-wrapper > * {
+  min-width: 100%;
+  scroll-snap-align: start;
+  border-radius: 5px;
+}
+
+blockquote {
+  padding: 2rem;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: var(--step-1);
+  color: var(--brand);
+}
+
+.review-wrapper h3 {
+  text-align: center;
+  color: var(--brand);
+}
+
+.pagnation ul {
+  display: flex;
+  justify-content: center;
+}
+
+.pagnation li {
+  color: var(--brand);
+  list-style: none;
+  border: 0.2rem solid var(--text);
+  transition: 0.3s;
+}
+
+.pagnation li:hover {
+  border: 0.2rem solid var(--brand);
+  transform: scale(1.05);
+}
+
+.pagnation a {
+  padding: 1.2rem;
+  text-decoration: none;
+  font-size: var(--step--1);
+}
+
+.pagnation li:active {
+  position: relative;
+  inset-block-start: 0.05rem;
+}
+
+/********************************************************/
+
+/************ 8_ MENU PAGES ************/
+
+/*********************************************************/
+
+/* Menu */
+
+.menu-cols h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+/* menu images */
+
+.menu-reel {
+  margin-block: var(--space-xl);
+  padding-block-end: var(--space-m);
+  display: flex;
+  /* change block-size for fixed heights */
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--brand) transparent;
+}
+
+.menu-reel > * {
+  flex: 0 0 auto;
+}
+
+.menu-reel img {
+  flex-basis: 300px;
+  width: 300px;
+  height: 200px;
+}
+
+.menu-reel h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: var(--step--2);
+  align-items: end;
+  justify-self: end;
+}
+
+/* space between "slides" */
+.menu-reel > * {
+  margin-inline-start: 1rem;
+}
+
+
+.menu-cols h3 img{
+display: inline;
+width: 1.2rem;
+margin-block-end: .2rem;
+}
+
+/************************************************************************************/
+
+/************6_OTHERS  ************/
+
+/************************************************************************************/
+
+h1 span {
+  color: var(--brand);
+}

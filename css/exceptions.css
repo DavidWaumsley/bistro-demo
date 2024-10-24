@@ -1,0 +1,28 @@
+/*
+EXCEPTIONS
+0_ BODY
+
+It gets kinda lonely here!
+
+/********************************************************/
+
+/************ 0_ BODY ************/              
+
+/*********************************************************/
+
+
+
+@media (width > 68rem) { 
+.home h1 {    
+    text-align: initial;  
+  }
+}
+
+ /* Stops the homepage hero section from getting regular "main" margin */
+ .home main > .hero {
+  margin-inline: -6vw;
+  margin-inline-start:initial;
+}
+
+
+

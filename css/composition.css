@@ -1,0 +1,364 @@
+/*
+COMPOSITION
+0_ BODY & TOP BAR
+1_ HEADER & NAV 
+2_ HOMEPAGE HERO
+3_ HOMEPAGE SPECIALS 
+4_ FOOTER 
+6_ MENU PAGES
+7_ FLUID BREAKOUTS 
+*/
+
+/********************************************************/
+
+/************ 0_ BODY & TOP BAR ************/
+
+/*********************************************************/
+
+/* margin/padding for body areas */
+.top-bar {
+  padding-inline: 6vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary);
+  margin-bottom: var(--space-xs);
+}
+
+header {
+  margin-inline: 6vw;
+}
+footer {
+  margin-inline: 6vw;
+}
+main {
+  margin-inline: 6vw;
+  margin-block-end: var(--space-2xl);
+}
+
+@media (width < 68rem) {
+  .hours {
+    display: none;
+  }
+}
+
+section{
+  padding-block: var(--space-m);
+}
+/************************************************************************************/
+
+/**********1_ HEADER & NAV  **********/
+
+/************************************************************************************/
+
+@media (width < 68rem) {
+  header > * {
+    display: grid;
+    place-content: center;
+  }
+}
+
+@media (width > 68rem) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-m);
+  margin-block-end: 0;
+}
+
+/************************************************************************************/
+
+/************ 2_ HOMEPAGE HERO ************/
+
+/************************************************************************************/
+
+@media (width <= 68rem) {
+  .hero {
+    display: grid;
+    justify-self: center;   
+  }
+
+ 
+.hero-img {
+  margin-block-end: var(--space-m);
+  margin-inline-end: 6vw;
+}
+}
+
+@media (width > 68rem) {
+  .hero {
+    margin-inline-start: 6vw;
+  }
+
+  .hero {
+    display: grid;
+    column-gap: var(--space-l);
+    grid-template:
+      " h    i " min-content
+      " b    i" 1fr
+      / 1fr 1fr;
+  }
+
+  .hero-heading {
+    grid-area: h;
+    min-width: 25ch;
+    margin-block-start: var(--space-s-xl);
+  }
+
+  .hero-img {
+    grid-area: i;
+    justify-self: end;   
+  }
+
+  .hero-blurb {
+    grid-area: b;
+  }
+
+  .hero img {
+    min-height: 100%;
+    object-fit: cover;    
+  }
+} /* end of media query */
+
+
+
+/************************************************************************************/
+
+/************ 3_ HOMEPAGE SPECIALS ************/
+
+/************************************************************************************/
+
+.special-section >* {
+  padding: var(--space-m);
+  margin: var(--space-m);   
+}
+
+.special-section  img{
+  display: none;
+}
+
+ .group-events >*{  
+  display: block; 
+  justify-items: center;       
+  }
+
+@media (width > 68rem) {
+.special-section {
+ display: grid; 
+ gap: var(--space-s);
+}
+}
+
+@media (width > 68rem) {
+.special-section {
+  display: grid; 
+  grid-template:     
+      " sh sh "   
+      " ge  so " 
+     /  2fr 1fr ;      
+  }
+  .events-inner-wrapper{
+    display: grid;  
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-s);    
+   }
+
+   .events-inner-wrapper img{   
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .special-section  img{
+    display: block;
+  }
+
+}/* end of media query */
+
+  .special-heading{
+    grid-area:sh;     
+  }
+
+  .group-events{
+    grid-area:ge;
+    background-color:var(--surface);  
+  }
+
+  .special-offers p{
+    margin-block-end: var(--space-s);
+   }
+  .special-offers {  
+    background-color:var(--surface);   
+    place-items: start;
+  }
+ 
+ 
+  
+/************************************************************************************/
+
+/************ 4_ FOOTER ************/
+
+/************************************************************************************/
+
+
+@media (width <= 68rem) {
+  .footer-inner-wrapper {
+    display: grid;    
+    margin-inline:auto;
+    width:40ch;  
+    text-align: center;
+  }
+
+  .footer-bar {
+   margin-top: var(--space-m);   
+  }
+}
+ 
+@media (width > 68rem) {
+ .footer-inner-wrapper {
+
+ padding-inline: 5vw;
+   display: grid; 
+  gap: var(--space-l); 
+  grid-template:     
+      " a  fc   oh "      
+      " fb  fb   fb  ";      
+  }
+
+  .footer-heading{
+    grid-area: fh;
+    margin-block-end: inherit;
+  }
+  .areas {
+    grid-area: a;  
+  }
+  
+  .footer-contacts{
+    grid-area: fc;
+  }
+  
+  .opening-hours{
+    grid-area: oh;
+   
+  }
+  .footer-bar {
+    grid-area: fb;
+    justify-items: center; 
+  }
+} /* end of media query */
+
+
+/************************************************************************************/
+
+/************ 6_ MENU PAGES ************/
+
+/************************************************************************************/
+
+.menu-cols {
+  columns: 25rem auto;
+  gap: var(--space-2xl);
+  column-rule: 0.2rem solid var(--text);
+  padding-inline: 3vw;
+  padding-block-start:var(--space-l) ;
+}
+
+.menu-page-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 3vw;
+}
+
+/************************************************************************************/
+
+/************ 7_ FLUID BREAKOUTS ************/
+
+/************************************************************************************/
+/* https://layout-breakouts-builder.vercel.app/ */
+
+.page-layout > *,
+.full-width > * {
+  grid-column: content;
+}
+.page-layout,
+.full-width {
+  --minimum-content-padding: 2rem;
+
+  /** TRACK WIDTHS **/
+  --full-max-width: 1fr;
+  --popout-max-width: 60rem;
+  --content-max-width: 65ch;
+
+  /** TRACK SIZES **/
+  --full: minmax(var(--minimum-content-padding), 1fr);
+  --popout: minmax(
+    0,
+    calc((var(--popout-max-width) - var(--content-max-width)) * 0.5)
+  );
+  --content: min(
+    var(--content-max-width),
+    100% - var(--minimum-content-padding) * 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    var(--full)
+    [popout-start]
+    var(--popout)
+    [content-start]
+    var(--content)
+    [content-end]
+    var(--popout)
+    [popout-end]
+    var(--full)
+    [full-end];
+}
+
+/** CLASSES **/
+.full {
+  grid-column: full;
+}
+.full-start {
+  grid-column-start: full-start;
+}
+.full-end {
+  grid-column-end: full-end;
+}
+
+.popout {
+  grid-column: popout;
+}
+.popout-start {
+  grid-column-start: popout-start;
+}
+.popout-end {
+  grid-column-end: popout-end;
+}
+
+.content {
+  grid-column: content;
+}
+.content-start {
+  grid-column-start: content-start;
+}
+.content-end {
+  grid-column-end: content-end;
+}
+
+.full-width {
+  grid-column: full;
+}
+.full-content,
+.full-content-nopad {
+  grid-column: full;
+}
+.full-content {
+  padding-inline: var(--minimum-content-padding);
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="preload"
+      href="/fonts/DMSerifDisplay-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="preload" as="image" href="/images/bistro-collage-m-sml.webp">
+
+    <!--  https://schema.org/Organization -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/composition.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <link rel="stylesheet" href="/css/block.css" />
+    <link rel="stylesheet" href="/css/exceptions.css" />
+
+    <!--SEO START -->
+    <link rel="canonical" href="https://bistro.here24.co" />
+    <title>No Script Show: Bistro Website Demo</title>
+    <meta
+      name="description"
+      content="This is a demo site to show off CSS Grid."
+    />
+    <!-- Facebook image -->
+    <meta property="og:image" content="/images/og-image.webp" />
+    <!-- Twitter image -->
+    <meta property="twitter:image" content="/images/og-image.webp" />
+    <!--SEO END -->
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/svg" href="/svgs/favicon.svg" />
+  </head>
+  <body class="home" id="top">
+    <a href="#skip-to-main" class="skip-link">Skip to content</a>
+
+    <!--TOP BAR -->
+
+    <div class="[ top-bar ]">
+      <a href="tel:01234567890">&#9742; 01234 567 890</a>
+      <!-- https://spencermortensen.com/articles/email-obfuscation/#link-url -->
+      <a
+        href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20Nathan's%20bistro%20website."
+        ><span class="email">
+          &#9993; info@nathansbistro<b>.example</b>.com</span
+        ></a
+      >
+      <p class="hours">
+        <strong>Opening Hours:</strong> Mon to Fri: 6am - 5pm | Sat: 7am - 6pm.
+        | Sun: 6am - 5pm
+      </p>
+
+      <button
+        class="toggle"
+        data-theme-toggle
+        id="theme-toggle"
+        style="display: none"
+        type="button"
+        aria-label=" light and dark mode switch"
+      >
+        <img
+          class="theme-icon"
+          src="/svgs/moon.svg"
+          alt="dark and light theme switcher"
+        />
+      </button>
+    </div>
+
+    <!--HEADER-->
+    <header>
+      <a class="[ logo ]" href="/"
+        ><img
+          src="/images/logo.png"
+          alt="Nathan's Bistro logo."
+          width="600"
+          height="260"
+      /></a>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/info.html">Events</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a class="btn" href="/#menu">Menus</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--MAIN-->
+
+    <main class="flow" id="skip-to-main">
+      <section class="[ hero ]">
+        <h1 class="[ hero-heading ]">
+          An oasis in Scarborough for <span>coffee</span> and
+          <span>food lovers</span>
+        </h1>
+
+        <!-- Picture tag -->
+        <picture class="hero-img">
+          <source
+          media="(width <= 50rem)"
+          srcset="/images/bistro-collage-m-sml.webp"
+          width="695"
+          height="734"
+        />
+          <source
+            media="(width <= 68rem)"
+            srcset="/images/collage-m.webp"
+            width="1000"
+            height="180"
+          />
+          <source
+            media="(width > 68rem)"
+            srcset="/images/bistro-collage.webp"
+            width="687"
+            height="734"
+          />
+       
+          <img
+            src="/images/collage-m.webp"
+            width="1000"
+            height="180"
+            alt="A collage showing the interior and exterior of the bistro along with images of food and drinks."
+            loading="eager"
+          />
+        </picture>
+
+        <div class="[ hero-blurb ] [ flow ]">
+          <p>
+            Our coffee shop and Bistro does not exist. It is a demo for the
+            <a href="https://www.youtube.com/@NoScriptShow/videos"
+              >No Script Show</a
+            >. You are welcome to join us there.
+          </p>
+          <p>
+            It's suitable for those who want a friendly, relaxing space for a
+            coffee or smoothie. Many like to visit us for our dining experience.
+          </p>
+          <ul>
+            <li>Menu freshly prepared daily.</li>
+            <li>Inside and outside seating.</li>
+            <li><a href="">Catering for group and special events.</a></li>
+            <li><a href="">Takeaway service.</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="[ flow ]">
+        <h2 class="sidelines">Menu</h2>
+
+        <div class="[ menu-option-grid ]" id="menu">
+          <div class="menu-option-item">
+            <a href="/breakfast.html"
+              ><img
+                src="/images/breakfast-menu.webp"
+                width="550"
+                height="550"
+                loading="lazy"
+                alt="a plate of eggs and bacon surround by muesli, berries and other breakfast items "
+              />
+            </a>
+            <h3>Breakfast and Brunch</h3>
+          </div>
+          <div class="menu-option-item">
+            <a href="/breakfast.html"
+              ><img
+                src="/images/lunch-menu.webp"
+                width="550"
+                height="550"
+                loading="lazy"
+                alt="A range of plated lunch dishes"
+            /></a>
+
+            <h3>Lunch and Specials</h3>
+          </div>
+          <div class="menu-option-item">
+            <a href="/breakfast.html"
+              ><img
+                src="/images/drinks-menu.webp"
+                width="550"
+                height="550"
+                loading="lazy"
+                alt=" a cup of frothy coffee"
+            /></a>
+            <h3>Drinks and Smoothies</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="[ special-section ]">
+        <h2 class="[ special-heading ][ sidelines ]">Specials</h2>
+
+        <div class="[ group-events ]">
+          <div class="[ events-inner-wrapper ] ">
+            <div class="[ flow ]">
+              <h3>Groups and Events</h3>
+              <p>
+                We regularly host staff team get-togethers and special family
+                events.
+              </p>
+              <p>
+                We have a good range of vegetarian and vegan options. If you
+                have other dietary requirement just let us know. I'm sure our
+                chef can help.
+              </p>
+              <br>
+
+              <a class="btn" href="">Book now</a>
+            </div>
+
+            <!-- Picture tag -->
+            <picture>
+              <source
+                media="(width <= 68rem)"
+                srcset="/images/group-dining-m.webp"
+                width="600"
+                height="250"
+              />
+              <source
+                media="(width > 68rem)"
+                srcset="/images/group-dining.webp"
+                width="400"
+                height="500"
+              />
+              <img
+                src="/images/group-dining.webp"
+                width="400"
+                height="500"
+                alt="people around a table enjoying a meal."
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="[ special-offers ][ center-me ]">
+          <h3>10% off your bill</h3>
+          <p class="[ pretty ]">Monday and Tuesdays before 11 am. <br> <strong>Discount code: </strong>"Nathan
+            has an awful lot of hats".</p>  
+          <img
+            src="/images/discount.webp"
+            width="400"
+            height="250"
+            loading="lazy"
+            alt=" A bowl of muesli with fresh berries"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="[ sidelines ]">Reviews</h2>
+
+        <div class="[ review-wrapper ]">
+          <blockquote id="slide-1">
+            <h3>Great coffee</h3>
+            <p>
+              "My American was smooth. Usually, it's so hard to find one which
+              you can enjoy just black. They have a really good atmosphere and
+              the place is spotless. Really nice bisto and cafe on the main
+              road."
+            </p>
+            <span class="star-rating">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </span>
+          </blockquote>
+
+          <blockquote id="slide-2">
+            <h3>I'm coming back</h3>
+            <p>
+              "I found a hair in my scramble egg. Short and curly. No extra
+              charge! My smoothie was lumpy. I'll be back."
+            </p>
+
+            <span class="star-rating">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </span>
+          </blockquote>
+
+          <blockquote id="slide-3">
+            <h3>Best place for brunch</h3>
+            <p>
+              "My favourite place for brunch in Scarborough. Staff are alway
+              friendly and welcoming (except the owner who is a grumpy old
+              bugger)."
+            </p>
+
+            <span class="[ star-rating ]">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </span>
+          </blockquote>
+          <blockquote id="slide-4">
+            <h3>Great for team events</h3>
+            <p>
+              "We use this place lunch when we have our quarterly staff meetings.
+              The menu is always changing and interesting so we keep coming back
+              for more. Recommended."
+            </p>
+
+            <span class="star-rating">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </span>
+          </blockquote>
+          <blockquote id="slide-5">
+            <h3>I think I drank too much</h3>
+            <p>
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
+              consectetur, repudiandae libero aliquam nesciunt delectus laborum
+              ratione."
+            </p>
+            <span class="[ star-rating ]">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </span>
+          </blockquote>
+        </div>
+
+        <div class="pagnation">
+          <ul>
+            <li><a href="#slide-1"> 1 </a></li>
+            <li><a href="#slide-2"> 2 </a></li>
+            <li><a href="#slide-3"> 3 </a></li>
+            <li><a href="#slide-4"> 4 </a></li>
+            <li><a href="#slide-5"> 5 </a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="[ flow ]" id="skip-to-footer">
+      <h2 class="[ angle ]">Details</h2>
+
+      <div class="[ footer-inner-wrapper ]">
+        <div class="[ areas ]">
+          <h3>Areas</h3>
+
+          <p>
+            Off the A106 near the A406 we are in easy reach of Southgate,
+            Finchley, Wood Green, Winchmore Hill, Enfield, Golders Green, Barnet
+            and absolutely nowhere near Scarborough.
+          </p>
+        </div>
+
+        <div class="[ footer-contacts ]">
+          <h3>Contacts</h3>
+          <!-- https://spencermortensen.com/articles/email-obfuscation/#link-url -->
+          <ul>
+            <li><a href="tel:01234567890">&#9742; 01234 567 890</a></li>
+            <li>
+              <a
+                href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20Nathan's%20bistro%20website."
+                ><span class="email">
+                  &#9993; info@nathansbistro<b>.example</b>.com</span
+                ></a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m6!3m5!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862!16zL20vMDRqcGw?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                ><address>&#9873; 10 Acacia Avenue, London, N13 1RE</address></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="[ opening-hours ]">
+          <h3>Opening hours</h3>
+          <p>
+            Mon to Fri: 6am - 5pm <br />
+            Saturday: 7am - 6pm. <br />
+            Sunday: 6am - 5pm
+          </p>
+        </div>
+
+        <div class="[ footer-bar ] [ center-me ]">
+          <p>
+            &copy; 2020 - now &centerdot;
+            <a href="/">Privacy & terms</a> &centerdot;
+            <a class="[ back-to-top ]" href="#top" aria-label="back to top">
+              Back to top ▲</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/light-dark.js"></script>
+  </body>
+</html>

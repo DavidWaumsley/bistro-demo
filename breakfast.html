@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="preload"
+      href="/fonts/DMSerifDisplay-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!--  https://schema.org/Organization -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/composition.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <link rel="stylesheet" href="/css/block.css" />
+    <link rel="stylesheet" href="/css/exceptions.css" />
+
+    <!--SEO START -->
+    <link rel="canonical" href="https://bistro.here24.co/breakfast/" />
+    <title>No Script Show: Simple Vet's Website Demo</title>
+    <meta
+      name="description"
+      content="This is a demo site to show off CSS Grid."
+    />
+    <!-- Facebook image -->
+    <meta property="og:image" content="/images/og-image.webp" />
+    <!-- Twitter image -->
+    <meta property="twitter:image" content="/images/og-image.webp" />
+    <!--SEO END -->
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/svg" href="/svgs/favicon.svg" />
+  </head>
+  <body class="breakfast" id="top">
+    <a href="#skip-to-main" class="skip-link">Skip to content</a>
+
+    <!--TOP BAR -->
+
+    <div class="[ top-bar ][ full-bg ]">
+      <a href="tel:01234567890">&#9742; 01234 567 890</a>
+      <!-- https://spencermortensen.com/articles/email-obfuscation/#link-url -->
+      <a
+        href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20Nathan's%20bistro%20website."
+        ><span class="email">
+          &#9993; info@nathansbistro<b>.example</b>.com</span
+        ></a
+      >
+      <p class="[ hours ]">
+        <strong>Opening Hours:</strong> Mon to Fri: 6am - 5pm | Sat: 7am - 6pm.
+        | Sun: 6am - 5pm
+      </p>
+
+      <button
+        class="toggle"
+        data-theme-toggle
+        id="theme-toggle"
+        style="display: none"
+        type="button"
+        aria-label=" light and dark mode switch"
+      >
+        <img
+          class="theme-icon"
+          src="/svgs/moon.svg"
+          alt="dark and light theme switcher"
+        />
+      </button>
+    </div>
+
+    <!--HEADER-->
+    <header>
+      <a class="[ logo ]" href="/"
+        ><img
+          src="/images/logo.png"
+          alt="Nathan's Bistro logo."
+          width="600"
+          height="260"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/info.html">Events</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a class="btn" href="/#menu">Menus</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="skip-to-main">
+      <section class="frame">
+        <h1 class="angle">Breakfast & Brunch</h1>
+
+        <div class="[ menu-cols ]  [ flow ]">
+          <h2>Nathan's specials</h2>
+
+          <h3>Brunch</h3>
+          <p>
+            Choice of egg (2), bacon, cumberland sausage, roasted cherry
+            tomatoes, portobello mushroom, baked beans and hash browns. Served
+            with sourdough toast.
+          </p>
+
+          <h3>Vegan <img src="/svgs/vegan-icon.svg" width="19" height="19"  alt=""></h3>
+
+          <p>
+            Scrambled tofu, sautéed spinach, vegetarian sausage, avocado,
+            roasted cherry tomatoes, portobello mushroom and hash browns. Served
+            with sourdough toast.
+          </p>
+
+          <h3>Vegetarian <img src="/svgs/vegetarian-icon.svg" width="19" height="19"  alt=""></h3>
+
+          <p>
+            Choice of egg (2), vegetarian sausage, roasted cherry tomatoes,
+            avocado, portobello mushroom, baked beans and hash browns. Served
+            with sourdough toast.
+          </p>
+
+          <h3>Nathan's Signature</h3>
+
+          <p>
+            Sourdough toast with cream cheese and scrambled eggs topped with pan
+            fried oyster mushrooms and avocado on the side.
+          </p>
+
+          <h3>Greek</h3>
+
+          <p>
+            Two fried eggs, grilled halloumi, lountza, loukaniko, roasted cherry
+            tomatoes, portobello mushroom and olives. Served with sourdough
+            toast and honey on the side.
+          </p>
+
+          <h3>Mediterranean</h3>
+
+          <p>
+            Sujuk, grilled vegetables, herby fried eggs, halloumi, fresh
+            cucumber, tomato, olives, natural honeycomb, jam and mulberry dip.
+            Served with pitta bread.
+          </p>
+
+          <h3>American</h3>
+          <p>
+            Choice of egg (2), bacon, Cumberland sausage, hash browns and
+            homemade pancakes served with berries and maple syrup.
+          </p>
+
+          <h2>Classics</h2>
+
+          <h3>Eggs Benedict</h3>
+          <h3>Florentine</h3>
+          <h3>Royale</h3>
+          <p>
+            Two poached eggs on toasted muffin or sourdough toast, with a choice
+            of grilled ham, bacon, smoked salmon or spinach.
+          </p>
+
+          <h3>Smashed Avocado Delight <img src="/svgs/vegetarian-icon.svg" width="19" height="19"  alt=""></h3>
+          <p>
+            Smashed avocado on toasted sourdough, crumbled feta cheese,
+            sun-blushed tomatoes and two poached eggs. Sprinkled with chilli
+            flakes.
+          </p>
+          <h3>Smashed Avocado and Figs</h3>
+          <p>
+            Smashed avocado on toasted sourdough with caramelised figs. Topped
+            with mixed seeds.
+          </p>
+          <h3>Stuffed Avocado <img src="/svgs/vegetarian-icon.svg" width="19" height="19"  alt=""></h3>
+          <p>
+            Whole avocado, stuffed with roasted peppers, feta cheese, cherry
+            tomatoes and pomegranate seeds with balsamic glaze.
+          </p>
+          <h3>Sweet Potato Rosti</h3>
+          <p>
+            Homemade sweet potato rosti, topped with smashed avocado, two
+            poached eggs, mixed seeds and chilli flakes. (Add hollandaise sauce
+            £1)
+          </p>
+          <h2>Sweet & Fruity </h2>
+          <h3>Granola  <img src="/svgs/vegetarian-icon.svg" width="19" height="19" alt=""> <img src="/svgs/vegan-icon.svg" width="19" height="19"  alt=""></h3>
+          <p>
+            Homemade granola, with fresh mixed berries and creamy Greek yoghurt,
+            served with a choice of maple syrup or honey. (Ask for coconut
+            yoghurt for vegan option)
+          </p>
+          <h3>Porridge <img src="/svgs/vegetarian-icon.svg" width="19" height="19"  alt=""> <img src="/svgs/vegan-icon.svg" width="19" height="19"  alt=""></h3>
+          <p>
+            Served with fresh mixed berries, banana and a choice of maple syrup
+            or honey. (Milk alternatives available for vegan option, please ask)
+          </p>
+          <h3>Fluffy Pancakes</h3>
+          <p>
+            Homemade pancakes served with choice of either mixed berries, flaked
+            almonds, homemade ricotta cream and maple syrup, or Nutella and
+            banana.
+          </p>
+        </div>
+        <!-- end of text menu -->
+      </section>
+
+      <div class="menu-reel">
+        <div>
+          <img src="/images/brunch.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Brunch</h4>
+        </div>
+
+        <div>
+          <img src="/images/vegan.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Vegan</h4>
+        </div>
+
+        <div>
+          <img src="/images/vegetarian.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Vegetarian</h4>
+        </div>
+
+        <div>
+          <img src="/images/salmon.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Signature</h4>
+        </div>
+
+        <div>
+          <img src="/images/greek.jpg" width="300" height="200" loading="lazy" alt="" />
+          <h4>Greek</h4>
+        </div>
+
+        <div>
+          <img src="/images/Mediterranean.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Mediterranean</h4>
+        </div>
+
+        <div>
+          <img src="/images/american.webp"  width="300" height="200" loading="lazy" alt="" />
+          <h4>American</h4>
+        </div>
+
+        <div>
+          <img src="/images/Benedict.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Egg Benedict</h4>
+        </div>
+
+        <div>
+          <img src="/images/sweet.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>Sweet and fruity</h4>
+        </div>
+
+        <div>
+          <img src="/images/figs.webp" width="300" height="200" loading="lazy" alt="" />
+          <h4>smashed avocado and figs</h4>
+        </div>
+      </div>
+
+      <div class="menu-page-pagination">
+        <a class="btn" href="/index.html">&#10229; Home</a>
+        <a class="btn" href="/lunch.html">Lunch & specials &#10230;</a>
+      </div>
+
+      <div class="angle-up">
+        <a class="btn" href="/">Group Bookings and Events</a>
+      </div>
+
+      <!-- https://codepen.io/gschier/pen/kyRXVx -->
+    </main>
+
+    <footer class="[ flow ]" id="skip-to-footer">
+      <h2 class="[ angle ]">Details</h2>
+
+      <div class="footer-inner-wrapper">
+        <div class="[ areas ]">
+          <h3>Areas</h3>
+
+          <p>
+            Off the A106 near the A406 we are in easy reach of Southgate,
+            Finchley, Wood Green, Winchmore Hill, Enfield, Golders Green, Barnet
+            and absolutely nowhere near Scarborough.
+          </p>
+        </div>
+
+        <div class="[ footer-contacts ]">
+          <h3>Contacts</h3>
+          <!-- https://spencermortensen.com/articles/email-obfuscation/#link-url -->
+          <ul>
+            <li><a href="tel:01234567890">&#9742; 01234 567 890</a></li>
+            <li>
+              <a
+                href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20Nathan's%20bistro%20website."
+                ><span class="email">
+                  &#9993; info@nathansbistro<b>.example</b>.com</span
+                ></a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/place/London,+UK/@51.5286416,-0.1015987,11z/data=!3m1!4b1!4m6!3m5!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862!16zL20vMDRqcGw?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                ><address>&#9873; 10 Acacia Avenue, London, N13 1RE</address></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="[ opening-hours ]">
+          <h3>Opening hours</h3>
+          <p>
+            Mon to Fri: 6am - 5pm <br />
+            Saturday: 7am - 6pm. <br />
+            Sunday: 6am - 5pm
+          </p>
+        </div>
+
+        <div class="[ footer-bar ] [ center-me ]">
+          <p>
+            &copy; 2020 - now &centerdot;
+            <a href="/">Privacy & terms</a> &centerdot;
+            <a class="[ back-to-top ]" href="#top" aria-label="back to top">
+              Back to top ▲</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/light-dark.js"></script>
+  </body>
+</html>
