@@ -83,13 +83,13 @@ header nav ul {
 @media (width <= 68rem) {
   .hero {
     display: grid;
-    justify-self: center;   
+    justify-self: center; 
+    margin-inline-end: 6vw;  
   }
 
  
 .hero-img {
-  margin-block-end: var(--space-m);
-  margin-inline-end: 6vw;
+  margin-block-end: var(--space-m);  
 }
 }
 
