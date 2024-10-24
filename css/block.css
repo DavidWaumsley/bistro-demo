@@ -406,19 +406,13 @@ textarea {
   margin-inline: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  width: min(80vw, 500px);
-  height: min-content;
+  width: min(80vw, 500px); 
 }
 
-.review-wrapper {
-  scrollbar-color: var(--brand) transparent;
-  scrollbar-width: 30px;
-}
 
 .review-wrapper > * {
   min-width: 100%;
-  scroll-snap-align: start;
-  border-radius: 5px;
+  scroll-snap-align: start; 
 }
 
 blockquote {
