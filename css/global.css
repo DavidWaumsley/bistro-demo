@@ -9,25 +9,11 @@ GLOBAL STYLES
 6_ OTHER GLOBAL ELEMENTS 
 
 
-    padding-block-end: 3rem;  
-
 /********************************************************/
 
 /************ 1_ COLOR VARIABLES  ************/
 
 /*********************************************************/
-/* :root{
-
-    --brand: #C0A966;
-    --accent: hsl(41, 90%, 54%);
-    --secondary: hsl(128, 45%, 23%);
-    --tertiary: #8ab7c6;  
-    --text:#BCBCBB;
-    --text-alt:#272726;
-    --surface:#272726;     
-    --shadow:hsl(0, 0%, 80%);
-    --shadow-2: hsl(0, 0%, 90%);
-  }      */
 
 [data-theme="dark"] {
   --brand: hsl(45, 42%, 58%);
@@ -44,7 +30,6 @@ GLOBAL STYLES
   --accent: hsl(45, 73%, 26%);
   --text: hsl(0, 0%, 22%);
   --secondary: hsl(194, 27%, 69%);
-
   --text-alt: hsl(60, 1%, 15%);
   --surface: hsl(0, 0%, 98%);
   --shadow: hsl(60, 1%, 15%);
