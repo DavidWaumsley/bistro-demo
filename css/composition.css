@@ -118,17 +118,18 @@ header nav ul {
 } /* end of media query */
 
 @media (width <= 68rem) {
-  .hero {
+  .hero >* {
     display: grid;
     justify-self: center; 
-    margin-inline-end: 6vw;  
+    margin-inline: 6vw;  
   }
 
- 
-.hero-img {
+ .hero-img {
   margin-block-end: var(--space-m);  
 }
 }
+
+
 
 /************************************************************************************/
 
