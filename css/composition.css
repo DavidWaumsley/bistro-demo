@@ -118,7 +118,7 @@ header nav ul {
 } /* end of media query */
 
 @media (width <= 68rem) {
-  .hero >* {
+  .hero >*:not(h1){
     display: grid;
     justify-self: center; 
     margin-inline: 6vw;  
