@@ -78,6 +78,14 @@ button.btn {
   transform: scale(1.05);
 }
 
+.btn2:hover {
+  color: var(--surface);
+  transition: 0.1s ease-in;
+  box-shadow: 0.05rem 0.08rem;
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
 
 .angle-up .btn{
   background-color: var(--secondary);
