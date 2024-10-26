@@ -37,7 +37,7 @@ GLOBALS:
   text-decoration: none;
   text-transform: uppercase;
   /*  fit-content stops stretching grid */
-  height: fit-content;
+  max-height: 120px;
   max-width: 120px;
   font-size: var(--step--2);
   outline: 0.1rem solid transparent;
