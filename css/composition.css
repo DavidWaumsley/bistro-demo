@@ -146,7 +146,7 @@ header nav ul {
   display: none;
 }
 
- .group-events >*{  
+ .group-events{  
   display: block; 
   justify-items: center;       
   }
@@ -189,8 +189,7 @@ header nav ul {
 
   .group-events{
     grid-area:ge;
-    background-color:var(--surface);
-    display: block;  
+    background-color:var(--surface);    
   }
 
   .special-offers p{
