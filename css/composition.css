@@ -189,7 +189,8 @@ header nav ul {
 
   .group-events{
     grid-area:ge;
-    background-color:var(--surface);  
+    background-color:var(--surface);
+    display: block;  
   }
 
   .special-offers p{
