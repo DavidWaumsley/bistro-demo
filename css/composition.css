@@ -212,8 +212,7 @@ header nav ul {
 @media (width <= 68rem) {
   .footer-inner-wrapper {
     display: grid;    
-    margin-inline:auto;
-    width:40ch;  
+    margin-inline:auto;   
     text-align: center;
   }
 
