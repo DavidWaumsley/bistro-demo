@@ -38,12 +38,11 @@ GLOBALS:
   text-transform: uppercase;
   /*  fit-content stops stretching grid */
   height: fit-content;
-  width: fit-content;
+  max-width: fit-content;
   font-size: var(--step--2);
   outline: 0.1rem solid transparent;
   outline-offset: -0.125rem;
-  transition: 0.3s;
-  transform: scale(1);
+  transition: 0.3s;  
 }
 
 button.btn {
