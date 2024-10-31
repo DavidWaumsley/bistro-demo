@@ -37,7 +37,7 @@ GLOBALS:
   text-decoration: none;
   text-transform: uppercase;
   /*  fit-content stops stretching grid */
-  max-height: fit-content;
+  max-block-size: fit-content;
   max-width: fit-content;
   font-size: var(--step--2);
   outline: 0.1rem solid transparent;
@@ -58,7 +58,7 @@ GLOBALS:
   text-decoration: none;
   text-transform: uppercase;
   /*  fit-content stops stretching grid */
-  max-height: 120px;
+  max-block-size: 120px;
   max-width: 120px;
   font-size: var(--step--2);
   outline: 0.1rem solid transparent;
@@ -123,8 +123,8 @@ button.btn {
   outline: inherit;
 }
 .theme-icon {
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   transition: 0.3s;
 }
 .theme-icon:hover {
@@ -148,7 +148,7 @@ button.btn {
 /************************************************************************************/
 
 .logo img {
-  width: 275px;
+  inline-size: 275px;
   padding: var(--space-2xs);
   margin-inline-start: -1rem;
   background: linear-gradient(
@@ -255,7 +255,7 @@ input[type="email"],
 input[type="tel"],
 textarea,
 select {
-  width: 100%;
+  inline-size: 100%;
   padding: 1rem 0.5rem;
   border: 0.2rem solid var(--text);
   border-radius: 0.5rem;
@@ -278,7 +278,7 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 
 /* Textarea specific styles */
 textarea {
-  height: 15rem;
+  block-size: 15rem;
   resize: vertical;
 }
 
@@ -300,14 +300,14 @@ textarea {
 .menu-option-item::before {
   content: "";
   position: absolute;
-  width: min(200px, 100%); /* the long side of the "L" shaped angle */
+  inline-size: min(200px, 100%); /* the long side of the "L" shaped angle */
   height: min(60px, 100%); /* the short side of the "L" shaped angle */
   border: 0.2rem solid var(--text);
 }
 
 .menu-option-item img {
-  width: 100%;
-  height: 320px;
+  inline-size: 100%;
+  block-size: 320px;
   object-fit: cover;
 }
 
@@ -336,8 +336,8 @@ textarea {
   }
 
   .menu-option-item img {
-    width: 100%;
-    height: 200px;
+    inline-size: 100%;
+    block-size: 200px;
     object-fit: cover;
     object-position: bottom;
   }
@@ -435,12 +435,12 @@ textarea {
   margin-inline: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  width: min(80vw, 500px); 
+  inline-size: min(80vw, 500px); 
 }
 
 
 .review-wrapper > * {
-  min-width: 100%;
+  min-inline-size: 100%;
   scroll-snap-align: start; 
 }
 
@@ -524,8 +524,8 @@ blockquote {
 
 .menu-reel img {
   flex-basis: 300px;
-  width: 300px;
-  height: 200px;
+  inline-size: 300px;
+  block-size: 200px;
 }
 
 .menu-reel h4 {
@@ -545,7 +545,7 @@ blockquote {
 
 .menu-cols h3 img{
 display: inline;
-width: 1.2rem;
+inline-size: 1.2rem;
 margin-block-end: .2rem;
 }
 

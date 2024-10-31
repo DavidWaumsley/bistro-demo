@@ -43,7 +43,7 @@ select {
 }
 
 textarea:not([rows]) {
-  min-height: 10em;
+  min-block-size: 10em;
 }
 
 :target {
@@ -57,7 +57,7 @@ svg,
 video {
   display: block;
   max-inline-size: 100%;
-  height: auto;
+  block-size: auto;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -73,7 +73,7 @@ a:not([class]) {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */

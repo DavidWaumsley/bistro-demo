@@ -256,7 +256,7 @@ figcaption {
 /*********************************************************/
 
 hr {
-  height: 0.01rem;
+  block-size: 0.01rem;
   background-color: var(--shadow);
   border: none;
 }
