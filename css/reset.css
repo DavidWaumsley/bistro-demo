@@ -18,6 +18,10 @@ html {
   text-size-adjust: none;
 }
 
+/* To animating to or from height: auto  */
+html {
+  interpolate-size: allow-keywords;
+}
 /* Remove default margin in favour of better control in authored CSS */
 
 body,
